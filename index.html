@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <!-- PROFILE -->
+        <div class="profile">
+          <div class="bio">
+            <img
+              class="avatar"
+              src="images/image-jeremy.png"
+              alt="jeremy's avatar"
+            />
+            <div class="intro">
+              <p class="report">Report for</p>
+              <h1 class="heading">Jeremy Robson</h1>
+            </div>
+          </div>
+
+          <div class="duration">
+            <p id="daily" class="paragraph">Daily</p>
+            <p id="weekly" class="paragraph">Weekly</p>
+            <p id="monthly" class="paragraph">Monthly</p>
+          </div>
+        </div>
+
+        <!-- WORK -->
+        <div class="work box">
+          <div class="svg-wrap light-orange">
+            <img class="icons" src="images/icon-work.svg" alt="" />
+          </div>
+
+          <div class="details">
+            <div class="category-dots">
+              <p class="category"></p>
+              <img src="images/icon-ellipsis.svg" alt="" />
+            </div>
+
+            <div class="hours-duration">
+              <p class="current-time">32hrs</p>
+              <p class="time-stamp">
+                <span class="timeframe"></span> -
+                <span class="previous-time">36hrs</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLAY -->
+        <div class="play box">
+          <div class="svg-wrap soft-blue">
+            <img class="icons" src="images/icon-play.svg" alt="" />
+          </div>
+
+          <div class="details">
+            <div class="category-dots">
+              <p class="category"></p>
+              <img src="images/icon-ellipsis.svg" alt="" />
+            </div>
+
+            <div class="hours-duration">
+              <p class="current-time">10hrs</p>
+              <p class="time-stamp">
+                <span class="timeframe"></span> -
+                <span class="previous-time">36hrs</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- STUDY -->
+        <div class="study box">
+          <div class="svg-wrap light-red">
+            <img class="icons" src="images/icon-study.svg" alt="" />
+          </div>
+
+          <div class="details">
+            <div class="category-dots">
+              <p class="category"></p>
+              <img src="images/icon-ellipsis.svg" alt="" />
+            </div>
+
+            <div class="hours-duration">
+              <p class="current-time">4hrs</p>
+              <p class="time-stamp">
+                <span class="timeframe"></span> -
+                <span class="previous-time">17hrs</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXERCISE -->
+        <div class="exercise box">
+          <div class="svg-wrap lime-green">
+            <img class="icons" src="images/icon-exercise.svg" alt="" />
+          </div>
+
+          <div class="details">
+            <div class="category-dots">
+              <p class="category"></p>
+              <img src="images/icon-ellipsis.svg" alt="" />
+            </div>
+
+            <div class="hours-duration">
+              <p class="current-time">4hrs</p>
+              <p class="time-stamp">
+                <span class="timeframe"></span> -
+                <span class="previous-time">5hrs</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SOCIAL -->
+        <div class="social box">
+          <div class="svg-wrap violet">
+            <img class="icons" src="images/icon-social.svg" alt="" />
+          </div>
+
+          <div class="details">
+            <div class="category-dots">
+              <p class="category"></p>
+              <img src="images/icon-ellipsis.svg" alt="" />
+            </div>
+
+            <div class="hours-duration">
+              <p class="current-time">5hrs</p>
+              <p class="time-stamp">
+                <span class="timeframe"></span> -
+                <span class="previous-time">10hrs</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SELF-CARE -->
+        <div class="self-care box">
+          <div class="svg-wrap soft-orange">
+            <img class="icons" src="images/icon-self-care.svg" alt="" />
+          </div>
+
+          <div class="details">
+            <div class="category-dots">
+              <p class="category"></p>
+              <img src="images/icon-ellipsis.svg" alt="" />
+            </div>
+
+            <div class="hours-duration">
+              <p class="current-time">2hrs</p>
+              <p class="time-stamp">
+                <span class="timeframe"></span> -
+                <span class="previous-time">2hrs</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
