@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Track your time effectively with Jeremy Robson's time tracking dashboard. Monitor daily, weekly, and monthly activities across work, play, study, exercise, social, and self-care categories with a user-friendly interface and detailed reports."
+    />
     <link
       rel="icon"
       type="image/png"
@@ -22,155 +26,196 @@
   </head>
   <body>
     <main>
-      <div class="container">
-        <!-- PROFILE -->
-        <div class="profile">
-          <div class="bio">
+      <div class="dashboard">
+        <div class="profile-card">
+          <!-- PROFILE -->
+          <div class="profile-card__info">
             <img
-              class="avatar"
+              class="profile-card__avatar"
               src="images/image-jeremy.png"
               alt="jeremy's avatar"
             />
-            <div class="intro">
-              <p class="report">Report for</p>
-              <h1 class="heading">Jeremy Robson</h1>
+            <div class="profile-card__details">
+              <p class="profile-card__report">Report for</p>
+              <h1 class="profile-card__name">Jeremy Robson</h1>
             </div>
           </div>
-
-          <div class="duration">
-            <p id="daily" class="paragraph">Daily</p>
-            <p id="weekly" class="paragraph">Weekly</p>
-            <p id="monthly" class="paragraph">Monthly</p>
+          <div class="profile-card__durations">
+            <p id="daily" class="profile-card__duration-option">Daily</p>
+            <p id="weekly" class="profile-card__duration-option">Weekly</p>
+            <p id="monthly" class="profile-card__duration-option">Monthly</p>
           </div>
         </div>
 
         <!-- WORK -->
-        <div class="work box">
-          <div class="svg-wrap light-orange">
-            <img class="icons" src="images/icon-work.svg" alt="" />
+        <div class="activity activity--work">
+          <div class="activity__icon-wrapper light-orange">
+            <img
+              class="activity__icon"
+              src="images/icon-work.svg"
+              alt="Work Icon"
+            />
           </div>
 
-          <div class="details">
-            <div class="category-dots">
-              <p class="category"></p>
-              <img src="images/icon-ellipsis.svg" alt="" />
+          <div class="activity__details">
+            <div class="activity__title-wrap">
+              <p class="activity__title"></p>
+              <img
+                class="activity__ellipsis-icon"
+                src="images/icon-ellipsis.svg"
+                alt=""
+              />
             </div>
-
-            <div class="hours-duration">
-              <p class="current-time">32hrs</p>
-              <p class="time-stamp">
-                <span class="timeframe"></span> -
-                <span class="previous-time">36hrs</span>
+            <div class="activity__timeframe-wrap">
+              <p class="activity__current-time">32hrs</p>
+              <p class="activity__time-stamp">
+                <span class="activity__current-timeframe"></span> -
+                <span class="activity__previous-time">36hrs</span>
               </p>
             </div>
           </div>
         </div>
 
         <!-- PLAY -->
-        <div class="play box">
-          <div class="svg-wrap soft-blue">
-            <img class="icons" src="images/icon-play.svg" alt="" />
+        <div class="activity activity--play">
+          <div class="activity__icon-wrapper soft-blue">
+            <img
+              class="activity__icon"
+              src="images/icon-play.svg"
+              alt="Play Icon"
+            />
           </div>
 
-          <div class="details">
-            <div class="category-dots">
-              <p class="category"></p>
-              <img src="images/icon-ellipsis.svg" alt="" />
+          <div class="activity__details">
+            <div class="activity__title-wrap">
+              <p class="activity__title"></p>
+              <img
+                class="activity__ellipsis-icon"
+                src="images/icon-ellipsis.svg"
+                alt=""
+              />
             </div>
-
-            <div class="hours-duration">
-              <p class="current-time">10hrs</p>
-              <p class="time-stamp">
-                <span class="timeframe"></span> -
-                <span class="previous-time">36hrs</span>
+            <div class="activity__timeframe-wrap">
+              <p class="activity__current-time">10hrs</p>
+              <p class="activity__time-stamp">
+                <span class="activity__current-timeframe"></span> -
+                <span class="activity__previous-time">36hrs</span>
               </p>
             </div>
           </div>
         </div>
 
         <!-- STUDY -->
-        <div class="study box">
-          <div class="svg-wrap light-red">
-            <img class="icons" src="images/icon-study.svg" alt="" />
+        <div class="activity activity--study">
+          <div class="activity__icon-wrapper light-red">
+            <img
+              class="activity__icon"
+              src="images/icon-study.svg"
+              alt="Study Icon"
+            />
           </div>
 
-          <div class="details">
-            <div class="category-dots">
-              <p class="category"></p>
-              <img src="images/icon-ellipsis.svg" alt="" />
+          <div class="activity__details">
+            <div class="activity__title-wrap">
+              <p class="activity__title"></p>
+              <img
+                class="activity__ellipsis-icon"
+                src="images/icon-ellipsis.svg"
+                alt=""
+              />
             </div>
-
-            <div class="hours-duration">
-              <p class="current-time">4hrs</p>
-              <p class="time-stamp">
-                <span class="timeframe"></span> -
-                <span class="previous-time">17hrs</span>
+            <div class="activity__timeframe-wrap">
+              <p class="activity__current-time">4hrs</p>
+              <p class="activity__time-stamp">
+                <span class="activity__current-timeframe"></span> -
+                <span class="activity__previous-time">17hrs</span>
               </p>
             </div>
           </div>
         </div>
 
         <!-- EXERCISE -->
-        <div class="exercise box">
-          <div class="svg-wrap lime-green">
-            <img class="icons" src="images/icon-exercise.svg" alt="" />
+        <div class="activity activity--exercise">
+          <div class="activity__icon-wrapper lime-green">
+            <img
+              class="activity__icon"
+              src="images/icon-exercise.svg"
+              alt="Exercise Icon"
+            />
           </div>
 
-          <div class="details">
-            <div class="category-dots">
-              <p class="category"></p>
-              <img src="images/icon-ellipsis.svg" alt="" />
+          <div class="activity__details">
+            <div class="activity__title-wrap">
+              <p class="activity__title"></p>
+              <img
+                class="activity__ellipsis-icon"
+                src="images/icon-ellipsis.svg"
+                alt=""
+              />
             </div>
-
-            <div class="hours-duration">
-              <p class="current-time">4hrs</p>
-              <p class="time-stamp">
-                <span class="timeframe"></span> -
-                <span class="previous-time">5hrs</span>
+            <div class="activity__timeframe-wrap">
+              <p class="activity__current-time">4hrs</p>
+              <p class="activity__time-stamp">
+                <span class="activity__current-timeframe"></span> -
+                <span class="activity__previous-time">5hrs</span>
               </p>
             </div>
           </div>
         </div>
 
         <!-- SOCIAL -->
-        <div class="social box">
-          <div class="svg-wrap violet">
-            <img class="icons" src="images/icon-social.svg" alt="" />
+        <div class="activity activity--social">
+          <div class="activity__icon-wrapper violet">
+            <img
+              class="activity__icon"
+              src="images/icon-social.svg"
+              alt="Social Icon"
+            />
           </div>
 
-          <div class="details">
-            <div class="category-dots">
-              <p class="category"></p>
-              <img src="images/icon-ellipsis.svg" alt="" />
+          <div class="activity__details">
+            <div class="activity__title-wrap">
+              <p class="activity__title"></p>
+              <img
+                class="activity__ellipsis-icon"
+                src="images/icon-ellipsis.svg"
+                alt=""
+              />
             </div>
-
-            <div class="hours-duration">
-              <p class="current-time">5hrs</p>
-              <p class="time-stamp">
-                <span class="timeframe"></span> -
-                <span class="previous-time">10hrs</span>
+            <div class="activity__timeframe-wrap">
+              <p class="activity__current-time">5hrs</p>
+              <p class="activity__time-stamp">
+                <span class="activity__current-timeframe"></span> -
+                <span class="activity__previous-time">10hrs</span>
               </p>
             </div>
           </div>
         </div>
 
         <!-- SELF-CARE -->
-        <div class="self-care box">
-          <div class="svg-wrap soft-orange">
-            <img class="icons" src="images/icon-self-care.svg" alt="" />
+        <div class="activity activity--self-care">
+          <div class="activity__icon-wrapper soft-orange">
+            <img
+              class="activity__icon"
+              src="images/icon-self-care.svg"
+              alt="Self Care Icon"
+            />
           </div>
 
-          <div class="details">
-            <div class="category-dots">
-              <p class="category"></p>
-              <img src="images/icon-ellipsis.svg" alt="" />
+          <div class="activity__details">
+            <div class="activity__title-wrap">
+              <p class="activity__title"></p>
+              <img
+                class="activity__ellipsis-icon"
+                src="images/icon-ellipsis.svg"
+                alt=""
+              />
             </div>
-
-            <div class="hours-duration">
-              <p class="current-time">2hrs</p>
-              <p class="time-stamp">
-                <span class="timeframe"></span> -
-                <span class="previous-time">2hrs</span>
+            <div class="activity__timeframe-wrap">
+              <p class="activity__current-time">2hrs</p>
+              <p class="activity__time-stamp">
+                <span class="activity__current-timeframe"></span> -
+                <span class="activity__previous-time">2hrs</span>
               </p>
             </div>
           </div>

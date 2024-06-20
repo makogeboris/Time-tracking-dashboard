@@ -132,7 +132,7 @@ body {
   padding-inline: 1.5rem;
 }
 
-.container {
+.dashboard {
   display: grid;
   margin-block: 5rem;
   gap: 1.5rem;
@@ -140,12 +140,12 @@ body {
   margin-inline: auto;
 }
 
-.profile {
+.profile-card {
   background-color: var(--Dark-blue);
   border-radius: 0.9375rem;
 }
 
-.bio {
+.profile-card__info {
   background-color: var(--Blue);
   border-radius: 0.9375rem;
   display: flex;
@@ -154,34 +154,34 @@ body {
   padding: 2.125rem 2rem;
 }
 
-.intro {
+.profile-card__details {
   display: flex;
   flex-direction: column;
   gap: 0.1875rem;
 }
 
-.report {
+.profile-card__report {
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.125;
   color: var(--Pale-blue);
 }
 
-.heading {
+.profile-card__name {
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 100%;
   color: var(--white);
 }
 
-.avatar {
+.profile-card__avatar {
   width: 4rem;
   border: 0.1875rem solid var(--white);
   border-radius: 100%;
   background: #d8d8d8;
 }
 
-.duration {
+.profile-card__durations {
   background-color: var(--Dark-blue);
   display: flex;
   justify-content: space-between;
@@ -189,34 +189,35 @@ body {
   padding: 1.5rem 2rem;
 }
 
-.paragraph {
+.profile-card__duration-option {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.3125;
   color: var(--Desaturated-blue);
   cursor: pointer;
   transition: all 0.3s;
+  width: fit-content;
 }
 
-.paragraph:is(:hover) {
+.profile-card__duration-option:is(:hover) {
   color: var(--white);
 }
 
-.category {
+.activity__title {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.3125;
   color: var(--white);
 }
 
-.current-time {
+.activity__current-time {
   font-weight: 400;
   font-size: clamp(2rem, 3.5vw + 1rem, 3.5rem);
   line-height: 2.375rem;
   color: var(--white);
 }
 
-.time-stamp {
+.activity__time-stamp {
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.125;
@@ -224,12 +225,12 @@ body {
   color: var(--Pale-blue);
 }
 
-.box {
+.activity {
   border-radius: 0.9375rem;
   height: fit-content;
 }
 
-.svg-wrap {
+.activity__icon-wrapper {
   height: 2.375rem;
   border-radius: 0.9375rem 0.9375rem 0 0;
   display: flex;
@@ -239,7 +240,7 @@ body {
   padding-inline-end: 0.875rem;
 }
 
-.details {
+.activity__details {
   background-color: var(--Dark-blue);
   border-radius: 0.9375rem;
   padding: 1.75rem 1.5rem;
@@ -251,58 +252,58 @@ body {
   transition: all 0.3s;
 }
 
-.details:hover {
+.activity__details:hover {
   background-color: #33397a;
 }
 
-.category-dots,
-.hours-duration {
+.activity__title-wrap,
+.activity__timeframe-wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.hours-duration {
+.activity__timeframe-wrap {
   gap: 0.5rem;
 }
 
-.icons {
+.activity__icon {
   height: 4.875rem;
   width: 4.875rem;
 }
 
 .light-orange,
-.work {
+.activity--work {
   background-color: var(--Light-orange);
 }
 
 .soft-blue,
-.play {
+.activity--play {
   background-color: var(--Soft-blue);
 }
 
 .light-red,
-.study {
+.activity--study {
   background-color: var(--Light-red);
 }
 
 .lime-green,
-.exercise {
+.activity--exercise {
   background-color: var(--Lime-green);
 }
 
 .violet,
-.social {
+.activity--social {
   background-color: var(--Violet);
 }
 
 .soft-orange,
-.self-care {
+.activity--self-care {
   background-color: var(--Soft-orange);
 }
 
 @media screen and (min-width: 37.5rem) {
-  .container {
+  .dashboard {
     gap: 1.875rem;
     grid-template-areas:
       "profile profile"
@@ -311,92 +312,92 @@ body {
       "social self-care";
   }
 
-  .profile {
+  .profile-card {
     grid-area: profile;
   }
 
-  .work {
+  .activity--work {
     grid-area: work;
   }
 
-  .play {
+  .activity--play {
     grid-area: play;
   }
 
-  .study {
+  .activity--study {
     grid-area: study;
   }
 
-  .exercise {
+  .activity--exercise {
     grid-area: exercise;
   }
 
-  .social {
+  .activity--social {
     grid-area: social;
   }
 
-  .self-care {
+  .activity--self-care {
     grid-area: self-care;
   }
 
-  .avatar {
+  .profile-card__avatar {
     width: 4.875rem;
   }
 
-  .heading {
+  .profile-card__name {
     font-size: 2.5rem;
     line-height: 2.9375rem;
   }
 
-  .current-time {
+  .activity__current-time {
     line-height: 4.125rem;
   }
 }
 
 @media screen and (min-width: 61.5625rem) {
-  .container {
+  .dashboard {
     grid-template-areas:
       "profile work play study"
       "profile exercise social self-care";
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .intro {
+  .profile-card__details {
     max-width: 8.75rem;
   }
 
-  .box {
+  .activity {
     min-height: 15.25rem;
     display: grid;
   }
 
-  .svg-wrap {
+  .activity__icon-wrapper {
     height: 2.8125rem;
   }
 
-  .bio {
+  .profile-card__info {
     flex-direction: column;
     align-items: flex-start;
     gap: 2.6875rem;
     padding: 2.375rem 3.125rem 5rem 2rem;
   }
 
-  .hours-duration {
+  .activity__timeframe-wrap {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .duration {
+  .profile-card__durations {
     flex-direction: column;
     padding: 1.625rem 2rem 2rem;
     gap: 1.3125rem;
   }
 
-  .profile {
+  .profile-card {
     max-width: 15.9375rem;
   }
 
-  .details {
+  .activity__details {
     padding: 1.8125rem 352.1875rempx 2rem 1.875rem;
     gap: 1.5rem;
   }
