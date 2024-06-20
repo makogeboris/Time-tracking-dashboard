@@ -193,14 +193,19 @@ body {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.3125;
+  text-decoration: none;
   color: var(--Desaturated-blue);
-  cursor: pointer;
   transition: all 0.3s;
   width: fit-content;
 }
 
-.profile-card__duration-option:is(:hover) {
+.profile-card__duration-option:hover {
   color: var(--white);
+}
+
+.profile-card__duration-option:focus-visible {
+  outline: 2px solid var(--Very-dark-blue);
+  outline-offset: 2px;
 }
 
 .activity__title {
