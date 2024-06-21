@@ -193,18 +193,20 @@ body {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.3125;
-  text-decoration: none;
   color: var(--Desaturated-blue);
   transition: all 0.3s;
+  cursor: pointer;
   width: fit-content;
+  border: transparent;
+  background: transparent;
 }
 
-.profile-card__duration-option:hover {
+.profile-card__duration-option:is(:hover, :active) {
   color: var(--white);
 }
 
 .profile-card__duration-option:focus-visible {
-  outline: 2px solid var(--Very-dark-blue);
+  outline: 2px solid var(--Pale-blue);
   outline-offset: 2px;
 }
 

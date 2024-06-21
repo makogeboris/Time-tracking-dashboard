@@ -4,33 +4,88 @@ const daily = document.getElementById("daily");
 const weekly = document.getElementById("weekly");
 const monthly = document.getElementById("monthly");
 const title = document.querySelectorAll(".activity__title");
-const timeframe = document.querySelectorAll(".activity__current-timeframe");
+const timeframeOpts = document.querySelectorAll(".activity__current-timeframe");
 const currentTime = document.querySelectorAll(".activity__current-time");
 const previousTime = document.querySelectorAll(".activity__previous-time");
+const activityDetails = document.querySelectorAll(".activity__details");
 const url = "data.json";
+let data;
 
 fetch(url)
-  .then((res) => res.json())
-  .then((data) => {
-    console.log(data);
-    addData(data);
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error(`HTTP error! Status: ${res.status}`);
+    }
+    return res.json();
+  })
+  .then((fetchedData) => {
+    data = fetchedData;
+
+    updateTimeframe("daily");
   })
   .catch((err) => {
     console.error(`Error fetching data: ${err.message}`);
+    activityDetails.forEach((detail) => {
+      detail.innerHTML = `Error fetching data: ${err.message}`;
+    });
   });
 
-function addData(data) {
+function addData(data, timeframe) {
   data.forEach((item, index) => {
+    const timeframeData = item.timeframes[timeframe];
+
     title[index].textContent = item.title;
-    timeframe[index].textContent = "Yesterday";
+    currentTime[index].textContent = `${timeframeData.current}hrs`;
+    previousTime[index].textContent = `${timeframeData.previous}hrs`;
   });
 }
 
-function checkTimeframe() {
-  if (daily) {
+function updateActiveTimeframe(timeframe) {
+  let timeframeText = "";
+  if (timeframe === "daily") {
+    timeframeText = "Yesterday";
+  } else if (timeframe === "weekly") {
+    timeframeText = "Last Week";
+  } else if (timeframe === "monthly") {
+    timeframeText = "Last Month";
+  }
+
+  timeframeOpts.forEach((option) => {
+    option.textContent = timeframeText;
+  });
+}
+
+function updateLinkStyles(selectedTimeframe) {
+  daily.style.color = "hsl(235, 45%, 61%)";
+  weekly.style.color = "hsl(235, 45%, 61%)";
+  monthly.style.color = "hsl(235, 45%, 61%)";
+
+  if (selectedTimeframe === "daily") {
+    daily.style.color = "white";
+  } else if (selectedTimeframe === "weekly") {
+    weekly.style.color = "white";
+  } else if (selectedTimeframe === "monthly") {
+    monthly.style.color = "white";
   }
 }
 
-daily.addEventListener("click", checkTimeframe);
+function updateTimeframe(selectedTimeframe) {
+  addData(data, selectedTimeframe);
+  updateLinkStyles(selectedTimeframe);
+  updateActiveTimeframe(selectedTimeframe);
+}
 
-//  The text for the previous period's time should change based on the active timeframe. For Daily, it should read "Yesterday" e.g "Yesterday - 2hrs". For Weekly, it should read "Last Week" e.g. "Last Week - 32hrs". For monthly, it should read "Last Month" e.g. "Last Month - 19hrs".
+daily.addEventListener("click", function (event) {
+  event.preventDefault();
+  updateTimeframe("daily");
+});
+
+weekly.addEventListener("click", function (event) {
+  event.preventDefault();
+  updateTimeframe("weekly");
+});
+
+monthly.addEventListener("click", function (event) {
+  event.preventDefault();
+  updateTimeframe("monthly");
+});
