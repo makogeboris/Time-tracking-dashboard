@@ -7,7 +7,6 @@
   - [Screenshot](#screenshot)
   - [Links](#links)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
 - [Author](#author)
 
 ## Overview
@@ -36,24 +35,6 @@ Users should be able to:
 - CSS Grid
 - Flexbox
 - Mobile-first workflow
-
-### What I learned
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
 
 ## Author
 
