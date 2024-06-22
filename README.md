@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution]()
-- [Live Site]()
+- [Solution](https://github.com/mkboris/Time-tracking-dashboard)
+- [Live Site](https://time-tracking-dashboard-blond-eight.vercel.app/)
 
 ### Built with
 
