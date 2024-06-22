@@ -41,6 +41,18 @@ function addData(data, timeframe) {
 }
 
 function updateActiveTimeframe(timeframe) {
+  daily.setAttribute("aria-pressed", "false");
+  weekly.setAttribute("aria-pressed", "false");
+  monthly.setAttribute("aria-pressed", "false");
+
+  if (timeframe === "daily") {
+    daily.setAttribute("aria-pressed", "true");
+  } else if (timeframe === "weekly") {
+    weekly.setAttribute("aria-pressed", "true");
+  } else if (timeframe === "monthly") {
+    monthly.setAttribute("aria-pressed", "true");
+  }
+
   let timeframeText = "";
   if (timeframe === "daily") {
     timeframeText = "Yesterday";
@@ -56,16 +68,16 @@ function updateActiveTimeframe(timeframe) {
 }
 
 function updateLinkStyles(selectedTimeframe) {
-  daily.style.color = "hsl(235, 45%, 61%)";
-  weekly.style.color = "hsl(235, 45%, 61%)";
-  monthly.style.color = "hsl(235, 45%, 61%)";
+  daily.classList.remove("active-timeframe");
+  weekly.classList.remove("active-timeframe");
+  monthly.classList.remove("active-timeframe");
 
   if (selectedTimeframe === "daily") {
-    daily.style.color = "white";
+    daily.classList.add("active-timeframe");
   } else if (selectedTimeframe === "weekly") {
-    weekly.style.color = "white";
+    weekly.classList.add("active-timeframe");
   } else if (selectedTimeframe === "monthly") {
-    monthly.style.color = "white";
+    monthly.classList.add("active-timeframe");
   }
 }
 

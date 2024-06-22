@@ -33,21 +33,37 @@
             <img
               class="profile-card__avatar"
               src="images/image-jeremy.png"
-              alt="jeremy's avatar"
+              alt="Jeremy Robson's avatar"
             />
             <div class="profile-card__details">
               <p class="profile-card__report">Report for</p>
               <h1 class="profile-card__name">Jeremy Robson</h1>
             </div>
           </div>
+
           <div class="profile-card__durations">
-            <button id="daily" class="profile-card__duration-option">
+            <button
+              id="daily"
+              class="profile-card__duration-option"
+              aria-pressed="true"
+              aria-label="View daily report"
+            >
               Daily
             </button>
-            <button id="weekly" class="profile-card__duration-option">
+            <button
+              id="weekly"
+              class="profile-card__duration-option"
+              aria-pressed="false"
+              aria-label="View weekly report"
+            >
               Weekly
             </button>
-            <button id="monthly" class="profile-card__duration-option">
+            <button
+              id="monthly"
+              class="profile-card__duration-option"
+              aria-pressed="false"
+              aria-label="View monthly report"
+            >
               Monthly
             </button>
           </div>
@@ -56,17 +72,32 @@
         <!-- WORK -->
         <div class="activity activity--work">
           <div class="activity__icon-wrapper light-orange">
-            <img class="activity__icon" src="images/icon-work.svg" alt="" />
+            <img
+              class="activity__icon"
+              src="images/icon-work.svg"
+              alt=""
+              aria-hidden="true"
+            />
           </div>
-
           <div class="activity__details">
             <div class="activity__title-wrap">
-              <p class="activity__title"></p>
-              <img
-                class="activity__ellipsis-icon"
-                src="images/icon-ellipsis.svg"
-                alt=""
-              />
+              <h2 class="activity__title"></h2>
+              <button aria-label="More options for Work" class="activity__btn">
+                <svg
+                  class="activity__btn--svg"
+                  width="21"
+                  height="5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    class="activity__btn--path"
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
             </div>
             <div class="activity__timeframe-wrap">
               <p class="activity__current-time"></p>
@@ -81,17 +112,32 @@
         <!-- PLAY -->
         <div class="activity activity--play">
           <div class="activity__icon-wrapper soft-blue">
-            <img class="activity__icon" src="images/icon-play.svg" alt="" />
+            <img
+              class="activity__icon"
+              src="images/icon-play.svg"
+              alt=""
+              aria-hidden="true"
+            />
           </div>
-
           <div class="activity__details">
             <div class="activity__title-wrap">
-              <p class="activity__title"></p>
-              <img
-                class="activity__ellipsis-icon"
-                src="images/icon-ellipsis.svg"
-                alt=""
-              />
+              <h2 class="activity__title"></h2>
+              <button aria-label="More options for Play" class="activity__btn">
+                <svg
+                  class="activity__btn--svg"
+                  width="21"
+                  height="5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    class="activity__btn--path"
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
             </div>
             <div class="activity__timeframe-wrap">
               <p class="activity__current-time"></p>
@@ -106,17 +152,32 @@
         <!-- STUDY -->
         <div class="activity activity--study">
           <div class="activity__icon-wrapper light-red">
-            <img class="activity__icon" src="images/icon-study.svg" alt="" />
+            <img
+              class="activity__icon"
+              src="images/icon-study.svg"
+              alt=""
+              aria-hidden="true"
+            />
           </div>
-
           <div class="activity__details">
             <div class="activity__title-wrap">
-              <p class="activity__title"></p>
-              <img
-                class="activity__ellipsis-icon"
-                src="images/icon-ellipsis.svg"
-                alt=""
-              />
+              <h2 class="activity__title"></h2>
+              <button aria-label="More options for Study" class="activity__btn">
+                <svg
+                  class="activity__btn--svg"
+                  width="21"
+                  height="5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    class="activity__btn--path"
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
             </div>
             <div class="activity__timeframe-wrap">
               <p class="activity__current-time"></p>
@@ -131,17 +192,35 @@
         <!-- EXERCISE -->
         <div class="activity activity--exercise">
           <div class="activity__icon-wrapper lime-green">
-            <img class="activity__icon" src="images/icon-exercise.svg" alt="" />
+            <img
+              class="activity__icon"
+              src="images/icon-exercise.svg"
+              alt=""
+              aria-hidden="true"
+            />
           </div>
-
           <div class="activity__details">
             <div class="activity__title-wrap">
-              <p class="activity__title"></p>
-              <img
-                class="activity__ellipsis-icon"
-                src="images/icon-ellipsis.svg"
-                alt=""
-              />
+              <h2 class="activity__title"></h2>
+              <button
+                aria-label="More options for Exercise"
+                class="activity__btn"
+              >
+                <svg
+                  class="activity__btn--svg"
+                  width="21"
+                  height="5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    class="activity__btn--path"
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
             </div>
             <div class="activity__timeframe-wrap">
               <p class="activity__current-time"></p>
@@ -156,17 +235,35 @@
         <!-- SOCIAL -->
         <div class="activity activity--social">
           <div class="activity__icon-wrapper violet">
-            <img class="activity__icon" src="images/icon-social.svg" alt="" />
+            <img
+              class="activity__icon"
+              src="images/icon-social.svg"
+              alt=""
+              aria-hidden="true"
+            />
           </div>
-
           <div class="activity__details">
             <div class="activity__title-wrap">
-              <p class="activity__title"></p>
-              <img
-                class="activity__ellipsis-icon"
-                src="images/icon-ellipsis.svg"
-                alt=""
-              />
+              <h2 class="activity__title"></h2>
+              <button
+                aria-label="More options for Social"
+                class="activity__btn"
+              >
+                <svg
+                  class="activity__btn--svg"
+                  width="21"
+                  height="5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    class="activity__btn--path"
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
             </div>
             <div class="activity__timeframe-wrap">
               <p class="activity__current-time"></p>
@@ -185,17 +282,31 @@
               class="activity__icon"
               src="images/icon-self-care.svg"
               alt=""
+              aria-hidden="true"
             />
           </div>
-
           <div class="activity__details">
             <div class="activity__title-wrap">
-              <p class="activity__title"></p>
-              <img
-                class="activity__ellipsis-icon"
-                src="images/icon-ellipsis.svg"
-                alt=""
-              />
+              <h2 class="activity__title"></h2>
+              <button
+                aria-label="More options for Self Care"
+                class="activity__btn"
+              >
+                <svg
+                  class="activity__btn--svg"
+                  width="21"
+                  height="5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    class="activity__btn--path"
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
             </div>
             <div class="activity__timeframe-wrap">
               <p class="activity__current-time"></p>

@@ -201,8 +201,13 @@ body {
   background: transparent;
 }
 
-.profile-card__duration-option:is(:hover, :active) {
-  color: var(--white);
+.profile-card__duration-option.active-timeframe {
+  color: white;
+}
+
+.profile-card__duration-option:hover,
+.profile-card__duration-option.active-timeframe:hover {
+  color: white;
 }
 
 .profile-card__duration-option:focus-visible {
@@ -215,6 +220,20 @@ body {
   font-size: 1.125rem;
   line-height: 1.3125;
   color: var(--white);
+}
+
+.activity__btn {
+  background: transparent;
+  border: transparent;
+}
+
+.activity__btn--svg {
+  cursor: pointer;
+  display: flex;
+}
+
+.activity__btn--path:hover {
+  fill: var(--white);
 }
 
 .activity__current-time {
