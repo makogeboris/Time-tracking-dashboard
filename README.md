@@ -30,11 +30,13 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- CSS Grid
-- Flexbox
-- Mobile-first workflow
+- **Semantic HTML5 markup** - Structured the content of the web page using meaningful and descriptive tags.
+- **CSS custom properties** - Utilized for defining reusable variables for colors, fonts, and other styles.
+- **CSS Grid** - Employed for creating complex layouts with a grid-based design.
+- **Flexbox** - Used for aligning and distributing space among items in a container.
+- **Mobile-first workflow** - Ensured the design and development prioritized mobile user experience.
+- **Fetch** - Used to make network requests and handle asynchronous data fetching.
+- **JSON** - Used for data interchange and storing structured data in a readable format.
 
 ## Author
 
